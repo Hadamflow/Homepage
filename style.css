@@ -1,3 +1,4 @@
+CSS
 /* General Styles */
 body {
     font-family: "Open Sans", sans-serif;
@@ -7,36 +8,49 @@ body {
     color: #495057;
     background-color: #F8F9FA;
 }
+
 /* Header */
 header {
-    background-color: #72909A;
+    background-color: rgba(114, 144, 154, 0.7); 
     color: #FFFFFF;
     padding: 20px 0;
     text-align: center;
+    position: relative;
+    z-index: 10;
+    top: 50px; /* Adjust the value (e.g., 100px, 150px) to your preference */ 
 }
+
 header h1 {
     font-size: 2.8rem;
     margin: 0;
 }
+
+header nav a {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add text shadow for better visibility */
+}
+
 /* Navigation Styles */
 nav ul {
     list-style: none;
     padding: 0;
     margin: 10px 0; 
-    display: flex;
+    display: flex;   /* Use Flexbox for horizontal layout */
     justify-content: center; 
+    flex-wrap: wrap; /* Allow items to wrap if they don't fit */
 }
+
 nav li {
-    margin: 0 15px;
+    margin: 0 5px;  /* Reduce horizontal margin for mobile */
 }
 
 nav a {
     color: #FFFFFF; 
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 8px 10px;  /* Slightly reduce padding for mobile */
     border-radius: 5px;
     transition: background-color 0.3s;
 }
+
 nav a:hover {
     background-color: #555;
 }
@@ -249,5 +263,64 @@ footer a:hover {
 
     nav li {
         margin: 10px 0; /* Adjust vertical margin for stacked items */
+    }
+}
+
+#media-banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.media-container {
+    display: flex; /* Use Flexbox for easy horizontal arrangement */
+    justify-content: space-around; /* Distribute items evenly */
+}
+
+.banner-media {
+    width: 32%; /* Adjust as needed for spacing/responsiveness */
+    height: auto;  
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+
+.left-image {
+    order: -1; /* Position this image on the left */
+}
+
+/* Overlay Styles (to keep header visible) */
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+    align-items: center;
+    color: white; /* Ensure text is visible on the dark background */
+}
+
+/* Media Query for Mobile Responsiveness - Removed */
+/*@media (max-width: 768px) { 
+    nav ul {
+        flex-direction: column;  
+        align-items: center;
+    }
+    
+    nav li {
+        margin: 10px 0;  
+    }
+    
+    nav a {
+        display: block;  
+        width: 100%;
+        text-align: center;
+    }
+}*/
+
+@media (max-width: 768px) {
+    header {
+        top: 100px; /* Adjust for mobile */
     }
 }
