@@ -46,12 +46,7 @@ window.addEventListener('load', function() {
                 element.classList.add('show');
             }
         }
-    }
-  
-    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-      window.location.href = "https://hadamflow.github.io/Homepage/desktop";
-  }
-  
+    }  
   
     window.addEventListener('scroll', fadeInOnScroll);
     fadeInOnScroll(); // Initial check on page load
