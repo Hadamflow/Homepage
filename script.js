@@ -52,3 +52,10 @@ window.addEventListener('load', function() {
 });
 
 
+            // Check screen width and display pop-up if needed
+            if (window.innerWidth <= 768) { // Adjust breakpoint if necessary
+                alert("If the navigation bar is not showing right, please switch to a desktop version.");
+            }
+        });
+
+
